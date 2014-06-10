@@ -1,0 +1,15 @@
+{
+	"name": "Cyberlink UpdateAdvisor",
+	"version": "2.4",
+	"manifest_version": 2,
+	"description": "See if your CyberLink software is fully compatible with Windows 8",
+	"icons": {"48": "img/cl_48.png", "128": "img/cl_128.png"},
+	"content_scripts": [
+		{"matches": ["http://www.cyberlink.com/stat/window8-updates-center/*","http://tw.cyberlink.com/stat/window8-updates-center/*","http://cn.cyberlink.com/stat/window8-updates-center/*", 
+					 "http://de.cyberlink.com/stat/window8-updates-center/*","http://es.cyberlink.com/stat/window8-updates-center/*","http://fr.cyberlink.com/stat/window8-updates-center/*", "http://it.cyberlink.com/stat/window8-updates-center/*","http://jp.cyberlink.com/stat/window8-updates-center/*","http://kr.cyberlink.com/stat/window8-updates-center/*"],
+		 "js": ["js/jquery-1.2.3.js","js/myscript.js"]}
+	],
+    "plugins":[
+        {"path":"UpdateAdvisor(chrome).dll","public":true}
+    ]
+}
